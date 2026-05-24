@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm install --save-dev vite@5.4.10 @vitejs/plugin-react@4.3.3 typescript@5.6.3 @types/react@18.3.12 @types/react-dom@18.3.1 @types/node@22.9.0 @types/redux-form@8.3.11 tailwindcss@3.4.14 postcss@8.4.49 autoprefixer@10.4.20 msw@2.6.4 2>&1)",
+      "PowerShell(npm install react-router-dom@6.27.0 axios@1.7.7 clsx@2.1.1 2>&1)",
+      "PowerShell(npx tsc --noEmit 2>&1)",
+      "PowerShell(npx tsc -b 2>&1)",
+      "PowerShell(npx vite build 2>&1)",
+      "Bash(npx vite *)",
+      "PowerShell(Start-Sleep -Seconds 3; try { \\(Invoke-WebRequest -Uri \"http://127.0.0.1:5173/\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { $_.Exception.Message })",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"vite\")",
+      "WebSearch",
+      "PowerShell(npx msw init public --save 2>&1)",
+      "PowerShell(Start-Sleep -Seconds 3; try { \\(Invoke-WebRequest -Uri \"http://127.0.0.1:5173/\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { $_.Exception.Message }; try { \\(Invoke-WebRequest -Uri \"http://127.0.0.1:5173/mockServiceWorker.js\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { $_.Exception.Message })",
+      "Bash(pdftotext -layout \"/c/Users/Vadym/.claude/uploads/eb655353-a3e2-46e0-a06f-a4ed2405bcbc/a17830a0-______.pdf\" -)",
+      "Bash(pdftotext -enc UTF-8 \"/c/Users/Vadym/.claude/uploads/eb655353-a3e2-46e0-a06f-a4ed2405bcbc/a17830a0-______.pdf\" \"/tmp/method.txt\")",
+      "Read(//tmp/**)",
+      "Bash(npm test *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

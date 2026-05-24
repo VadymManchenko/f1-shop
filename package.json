@@ -1,0 +1,63 @@
+{
+  "name": "f1-shop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev:ci": "vite --port 5173",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "e2e": "start-server-and-test dev:ci http://localhost:5173 cypress:run",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.20",
+    "axios": "^1.7.7",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.27.0",
+    "redux": "^4.2.1",
+    "redux-form": "^8.3.10",
+    "redux-observable": "^2.0.0",
+    "redux-saga": "^1.3.0",
+    "redux-thunk": "^2.4.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.28.5",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^14.3.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/redux-form": "^8.3.11",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "babel-jest": "^29.7.0",
+    "cypress": "^14.5.4",
+    "gh-pages": "^6.3.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "msw": "^2.6.4",
+    "postcss": "^8.4.49",
+    "start-server-and-test": "^2.1.5",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

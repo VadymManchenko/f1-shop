@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RaceCard snapshot рендерить наступну гонку 1`] = `
+<DocumentFragment>
+  <article
+    class="group relative shrink-0 w-[260px] h-[180px] overflow-hidden border bg-ink-900 text-white border-ink-100 ring-1 ring-inset transition-all duration-300 ease-out hover:scale-[1.05] hover:-translate-y-1 hover:shadow-2xl hover:z-10 ring-yellow-400/70 scale-[1.02] shadow-xl"
+  >
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url(/tracks/monaco.jpg);"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/35 to-ink-900/10"
+    />
+    <div
+      class="absolute inset-0 bg-yellow-400/40 mix-blend-multiply"
+    />
+    <div
+      class="relative flex h-full flex-col justify-between p-5"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <span
+            class="h-2 w-2 rounded-full bg-yellow-400"
+          />
+          <span
+            class="font-mono text-[10px] tracking-widest uppercase opacity-90"
+          >
+            R07
+          </span>
+        </div>
+        <span
+          class="px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest bg-yellow-400 text-black"
+        >
+          Наступний
+        </span>
+      </div>
+      <div>
+        <div
+          class="font-display text-xl leading-tight"
+        >
+          MONACO
+        </div>
+        <div
+          class="text-[11px] uppercase tracking-widest opacity-70 mt-0.5"
+        >
+          MCO
+        </div>
+        <div
+          class="mt-3 font-mono text-sm tracking-widest"
+        >
+          22 — 24 MAY
+        </div>
+      </div>
+    </div>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`RaceCard snapshot рендерить скасовану гонку 1`] = `
+<DocumentFragment>
+  <article
+    class="group relative shrink-0 w-[260px] h-[180px] overflow-hidden border bg-ink-900 text-white border-ink-100 ring-1 ring-inset transition-all duration-300 ease-out hover:scale-[1.05] hover:-translate-y-1 hover:shadow-2xl hover:z-10 ring-red-500/40"
+  >
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url(/tracks/bahrain.jpg);"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/35 to-ink-900/10"
+    />
+    <div
+      class="absolute inset-0 bg-red-600/45 mix-blend-multiply"
+    />
+    <div
+      class="relative flex h-full flex-col justify-between p-5"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="flex items-center gap-2"
+        >
+          <span
+            class="h-2 w-2 rounded-full bg-red-500"
+          />
+          <span
+            class="font-mono text-[10px] tracking-widest uppercase opacity-90"
+          >
+            R01
+          </span>
+        </div>
+        <span
+          class="px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest bg-red-600 text-white"
+        >
+          Скасовано
+        </span>
+      </div>
+      <div>
+        <div
+          class="font-display text-xl leading-tight line-through opacity-90"
+        >
+          BAHRAIN
+        </div>
+        <div
+          class="text-[11px] uppercase tracking-widest opacity-70 mt-0.5"
+        >
+          BHR
+        </div>
+        <div
+          class="mt-3 font-mono text-sm tracking-widest"
+        >
+          06 — 08 MAR
+        </div>
+      </div>
+    </div>
+  </article>
+</DocumentFragment>
+`;

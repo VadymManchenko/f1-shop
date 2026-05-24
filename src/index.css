@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  ::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 border px-5 py-2.5 text-sm font-medium tracking-wider uppercase transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink-900 text-white border-ink-900 hover:bg-ink-700 hover:border-ink-700;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-900 border-ink-900 hover:bg-ink-900 hover:text-white;
+  }
+
+  .btn-subtle {
+    @apply btn bg-transparent border-transparent text-ink-500 hover:text-ink-900;
+  }
+
+  .input {
+    @apply w-full border border-ink-200 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-300 focus:border-ink-900 focus:outline-none transition-colors;
+  }
+
+  .label {
+    @apply block text-xs font-medium uppercase tracking-widest text-ink-400 mb-2;
+  }
+
+  .card {
+    @apply border border-ink-100 bg-white;
+  }
+
+  .divider {
+    @apply h-px w-full bg-ink-100;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-widest text-ink-400;
+  }
+}
+
+@layer utilities {
+  @keyframes cart-pulse {
+    0%   { transform: scale(1);   color: inherit; }
+    30%  { transform: scale(1.5); color: #DC0000; }
+    100% { transform: scale(1);   color: inherit; }
+  }
+
+  .animate-cart-pulse {
+    animation: cart-pulse 0.7s ease-out;
+  }
+
+  @keyframes added-pop {
+    0%   { transform: scale(0.6); opacity: 0; }
+    40%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1);   opacity: 1; }
+  }
+
+  .animate-added-pop {
+    animation: added-pop 0.35s ease-out;
+  }
+
+  @keyframes stat-in {
+    from { transform: translateY(16px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+
+  .animate-stat-in {
+    opacity: 0;
+    animation: stat-in 0.55s ease-out forwards;
+  }
+}
