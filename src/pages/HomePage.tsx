@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { assetUrl } from '@/lib/assetUrl';
 
 export function HomePage() {
   return (
@@ -30,7 +31,7 @@ export function HomePage() {
             aria-hidden="true"
           />
           <img
-            src="/helmet.png"
+            src={assetUrl('/helmet.png')}
             alt="Шолом пілота Формули-1"
             className="relative h-full w-full object-contain object-center"
             onError={(e) => {

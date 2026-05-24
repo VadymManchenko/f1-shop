@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import type { ResolvedRace } from './raceStatus';
 import { formatRaceDates } from './raceStatus';
+import { assetUrl } from '@/lib/assetUrl';
 
 interface Props {
   race: ResolvedRace;
@@ -66,7 +67,7 @@ export function RaceCard({ race }: Props) {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(/tracks/${race.slug}.jpg)` }}
+        style={{ backgroundImage: `url(${assetUrl(`/tracks/${race.slug}.jpg`)})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-900/85 via-ink-900/35 to-ink-900/10" />

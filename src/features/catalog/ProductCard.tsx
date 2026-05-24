@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import type { Product } from '@/types/domain';
 import { TEAM_ACCENT, TEAM_LABEL, CATEGORY_LABEL } from './teamPalette';
+import { assetUrl } from '@/lib/assetUrl';
 
 interface Props {
   product: Product;
@@ -32,7 +33,7 @@ export function ProductCard({ product, onAdd }: Props) {
           }}
         />
         <img
-          src={product.image}
+          src={assetUrl(product.image)}
           alt=""
           loading="lazy"
           className="relative h-full w-full object-cover opacity-0 transition-opacity duration-300"

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { cartActions } from '@/features/cart/cartSlice';
 import { TEAM_LABEL, TEAM_ACCENT } from '@/features/catalog/teamPalette';
+import { assetUrl } from '@/lib/assetUrl';
 
 export function CartPage() {
   const dispatch = useAppDispatch();
@@ -41,7 +42,7 @@ export function CartPage() {
                       aria-hidden="true"
                     />
                     <img
-                      src={product.image}
+                      src={assetUrl(product.image)}
                       alt=""
                       loading="lazy"
                       className="relative h-full w-full object-cover opacity-0 transition-opacity duration-300"

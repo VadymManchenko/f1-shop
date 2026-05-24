@@ -6,6 +6,7 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   moduleNameMapper: {
+    '^@/lib/assetUrl$': '<rootDir>/src/__mocks__/assetUrl.ts',
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(jpg|jpeg|png|gif|svg|css|scss)$': '<rootDir>/src/__mocks__/fileMock.cjs',
   },

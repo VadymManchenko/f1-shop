@@ -5,6 +5,7 @@ import { useAppDispatch } from '@/app/hooks';
 import { useProduct } from '@/features/catalog/useProducts';
 import { cartActions } from '@/features/cart/cartSlice';
 import { StartLightsLoader } from '@/components/StartLightsLoader';
+import { assetUrl } from '@/lib/assetUrl';
 import {
   TEAM_LABEL,
   TEAM_ACCENT,
@@ -56,7 +57,7 @@ export function ProductPage() {
             }}
           />
           <img
-            src={product.image}
+            src={assetUrl(product.image)}
             alt=""
             className="relative h-full w-full object-cover opacity-0 transition-opacity duration-300"
             onLoad={(e) => {
